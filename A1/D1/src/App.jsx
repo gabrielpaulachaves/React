@@ -8,7 +8,7 @@ function Square({valor, onsquareclick}){  //aqui, vamos escrever um único compo
 export default function Board() { //componente pai
             //o componente pai pode passar um valor diferente para cada componente filho. Esse valor são props
 
-     //squares = valor atual, vai ser tipo uma camera dos valores guardados no setsquares   //setsquares = usado para mudar o valor, é ele quem guarda os valores
+     //squares = valor atual, vai ser tipo uma camera dos valores guardados no setsquares   //setsquares = usado para mudar o valor. Quem guarda os valores é o react
     const [squares, setsquares] = useState(Array(9).fill(null))//esse null é o valor inicial da funcao. Nesse caso, o "squares" começa com valor inicial de null
         function handleclick(i){
             const nextsquare = squares.slice()
