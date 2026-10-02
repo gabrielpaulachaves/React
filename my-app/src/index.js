@@ -1,6 +1,9 @@
+//esse é o arquivo central
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './index.css'; //esse é o css global da aplicacao
+//porem, quando chegamos a nivel de componente, é interessante um arquivo CSS para cada um. Criamos assim: Frase.module.css (ou seja: "Componente".module.css)
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 

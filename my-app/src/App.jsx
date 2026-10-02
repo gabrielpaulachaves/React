@@ -2,6 +2,7 @@ import './App.css';
 import Hworld from './components/Hworld'
 import Saymn from './components/Saymn'; 
 import { Pessoa } from './components/Pessoa';
+import Lists from './components/Lists';
 
 
 function App() {
@@ -24,8 +25,12 @@ function App() {
       <Hworld />
       <Saymn nome="Yuchikage Kira" idade="31"/> 
       <Pessoa nome="Light Yagami" foto={url2} profissao="modelo"/>
+      <Lists />
     </div>
   );
 }
 
 export default App;
+
+
+//referente aula 08: podemos definir tipos para props, definimos em um objeto chamado PropTypes no componente, e também podemos definir um valor default. Para isso, usamos import PropTypes from "prop-types" (no arquivo Itens.jsx há eu fazendo o uso)
