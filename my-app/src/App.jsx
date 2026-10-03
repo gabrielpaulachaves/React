@@ -3,6 +3,8 @@ import Hworld from './components/Hworld'
 import Saymn from './components/Saymn'; 
 import { Pessoa } from './components/Pessoa';
 import Lists from './components/Lists';
+import Evento from './components/Evento';
+import Form from './components/Form';
 
 
 function App() {
@@ -26,6 +28,8 @@ function App() {
       <Saymn nome="Yuchikage Kira" idade="31"/> 
       <Pessoa nome="Light Yagami" foto={url2} profissao="modelo"/>
       <Lists />
+      <Evento num="25"/>
+      <Form />
     </div>
   );
 }
