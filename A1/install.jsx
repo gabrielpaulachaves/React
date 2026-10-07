@@ -1,4 +1,5 @@
 //instalando react. Usaremos npm create vite@latest my-app -- --template react (esse my-app é o nome do projeto, pode ser qualquer nome. Ele cria uma pasta com esse nome escolhido. Depois entre na pasta criada, usando cd "pasta" e escreva npm start no terminal, e é necessario usar npm start em outra maquina pois os arquivos nao vao pro github)
+//para rodar, usaremos npm run dev 
 
 //antes eu tava usando o create-react-app, mas o vite é mais rapido e leve, e é mais facil de usar. O vite é um bundler, ele junta todos os arquivos do projeto em um unico arquivo, e tambem faz a parte de desenvolvimento, como o hot reload (quando voce salva o arquivo ele atualiza automaticamente no navegador sem precisar atualizar a pagina). O vite tambem tem suporte a typescript, mas nesse curso vamos usar apenas javascript.
 
