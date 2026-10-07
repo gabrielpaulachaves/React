@@ -1,3 +1,4 @@
+//npm install prop-types
 import PropTypes from "prop-types"
 
 export default function Itens({marca = "Sem marca", lancamento = 0}){
