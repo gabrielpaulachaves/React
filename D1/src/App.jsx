@@ -37,4 +37,4 @@ export default function Board() { //componente pai
 }
 
 //<Square valor={squares[0]}/>  nessa linha aqui, esse componente (ou funcao) está recebendo como prop o valor guardado nesse indice no array, que irá para a funcao Square(), e nessa funcao Square, há um elemento que irá exibir o valor desse prop. É basicamente assim que o pai da o valor para o filho exibir
-//re-render é basicamente a ideia de chamar uma funcao toda vez que algo muda na tela. o UseState entra em cena para evitar com que os valores sejam resetados tbm, para manter os valores já clicados ainda exibindo quando algo novo atualiza na tela. Quem faz essa chamada é o react
+//re-render é basicamente a ideia de chamar uma funcao toda vez que algo muda na tela. o UseState entra em cena para evitar com que os valores sejam resetados tbm, para manter os valores já clicados ainda exibindo quando algo novo atualiza na tela. Quem faz essa chamada é o react. Ou seja, o usestate ainda exibe o estado anterior

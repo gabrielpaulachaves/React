@@ -1,16 +1,21 @@
 
+import Botao from "./Botao"
 
-export default function Evento({num}){
+export default function Evento(){
 
     function meuEvento(){
-        console.log(`clicado com sucesso ${num}`)
+        console.log("ativando evento")
 
+    }
+    function segundoEvento(){
+        console.log("ativando segundo evento")
     }
 
     return(
-        <>
+        <>    
         <p>Clique</p>
-        <button onClick={meuEvento}>Clicar</button>
+         <Botao event={meuEvento} text="evento"/>
+         <Botao event={segundoEvento} text="evento dois"/>
         </>
     )
 }

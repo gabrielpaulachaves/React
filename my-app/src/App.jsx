@@ -5,7 +5,7 @@ import { Pessoa } from './components/Pessoa';
 import Lists from './components/Lists';
 import Evento from './components/Evento';
 import Form from './components/Form';
-
+import Condicional from './components/Condicional';
 
 function App() {
   let nome = "Gabriel"
@@ -20,6 +20,10 @@ function App() {
 
   return ( 
     <div className="App">
+      <Condicional />
+      {/*
+        CODIGO ANTIGO, IREI TESTAR OUTRO
+      
         <h1>Olá, {nome}</h1>
       <p>somando tudo: {somar(45, 6)}</p>
       <h2>Sua foto:</h2>
@@ -28,8 +32,11 @@ function App() {
       <Saymn nome="Yuchikage Kira" idade="31"/> 
       <Pessoa nome="Light Yagami" foto={url2} profissao="modelo"/>
       <Lists />
-      <Evento num="25"/>
+      <Evento/>
       <Form />
+    */}
+
+
     </div>
   );
 }
