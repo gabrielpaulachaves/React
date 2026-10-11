@@ -2,15 +2,17 @@ import { useState } from "react"
 
 export default function Condicional(){
 
-let [email, setemail] = useState()
-let [useremail, setuseremail] = useState()
+const [email, setemail] = useState()
+const [useremail, setuseremail] = useState()
 console.log(email)
+console.log(useremail)
+
 function enviarEmail(e){
     e.preventDefault()
-    //console.log(email)
+    
     setuseremail(email)
 
-    
+    console.log(email)
     console.log(`${useremail} 1`)
 }
 function limparemail(){

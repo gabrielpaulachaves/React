@@ -38,9 +38,11 @@ exibiremos conteudo baseado em if/else
 podemos usar state para criar condicoes
     usaremos {condicao && ()}    os && sao o if
 
+A 13 -
+renderizando listas
+(componente Lista)
 
-
-
+A 14 - statelift
 
 
 

@@ -6,8 +6,10 @@ import Lists from './components/Lists';
 import Evento from './components/Evento';
 import Form from './components/Form';
 import Condicional from './components/Condicional';
+import Lista from './components/Lista';
 
 function App() {
+
   let nome = "Gabriel"
 
   let url = "https://static.gazetaesportiva.com/uploads/imagem/2020/08/12/WhatsApp-Image-2020-08-12-at-00.45.17.jpeg"
@@ -17,11 +19,15 @@ function App() {
 
   }
 
+  const meusitens = ['teclado', 'mouse', 'monitor', 'luminaria']
 
   return ( 
     <div className="App">
-      <Condicional />
+      <Lista itens={meusitens}/>
+       <Lista itens=''/> 
       {/*
+      <Condicional />
+
         CODIGO ANTIGO, IREI TESTAR OUTRO
       
         <h1>Olá, {nome}</h1>
