@@ -47,4 +47,7 @@ tecnica para compartilhar estado
 alguns componentes podem depender do mesmo estado, e pra isso, passamos o state pro componente pai
 definimos quem usa e quem define
 
+
+A 15 - react router
+
 */
