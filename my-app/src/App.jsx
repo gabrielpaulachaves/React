@@ -7,6 +7,9 @@ import Evento from './components/Evento';
 import Form from './components/Form';
 import Condicional from './components/Condicional';
 import Lista from './components/Lista';
+import Seunome from './components/Seunome';
+import { useState } from 'react';
+import Saudacoes from './Saudacoes';
 
 function App() {
 
@@ -21,11 +24,18 @@ function App() {
 
   const meusitens = ['teclado', 'mouse', 'monitor', 'luminaria']
 
+  const [seunome, setseunome] = useState('') //no statelift, ao inves de escrever o usestate no componente filho (que nesse exemplo, seria o <seunome/>, escrevemos aqui no componente pai)
+
   return ( 
     <div className="App">
-      <Lista itens={meusitens}/>
-       <Lista itens=''/> 
+        <h1>State lift</h1>
+      <Seunome setseunome={setseunome}/>
+      
+      <Saudacoes nome={seunome}/>
       {/*
+    <Lista itens={meusitens}/>
+       <Lista itens=''/> 
+      
       <Condicional />
 
         CODIGO ANTIGO, IREI TESTAR OUTRO
