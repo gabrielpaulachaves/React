@@ -46,8 +46,13 @@ A 14 - statelift
 tecnica para compartilhar estado
 alguns componentes podem depender do mesmo estado, e pra isso, passamos o state pro componente pai
 definimos quem usa e quem define
+quando tenho dois ou mais componentes que precisam atualizar o mesmo estado ou usar o mesmo estado mas nao conseguir passar o estado de um pro outro, entao colocamos o estado no componente pai
 
 
 A 15 - react router
+é por ele que iremos mudar as paginas
+muda a URL da aplicacao, é igual quando eu mudava a URL pelo nodejs, só que agora quem vai mudar é o react
+vamos poder acessar outras paginas sem o page reload
 
+para instalar: npm install react-router-dom
 */

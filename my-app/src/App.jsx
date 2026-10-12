@@ -10,29 +10,61 @@ import Lista from './components/Lista';
 import Seunome from './components/Seunome';
 import { useState } from 'react';
 import Saudacoes from './Saudacoes';
+import Home from './pages/Home';
+import Sobre from './pages/Sobre';
+import Contato from './pages/Contato';
+import Navbar from './components/Navbar';
 
-function App() {
 
-  let nome = "Gabriel"
+export default function App() {
 
-  let url = "https://static.gazetaesportiva.com/uploads/imagem/2020/08/12/WhatsApp-Image-2020-08-12-at-00.45.17.jpeg"
-  let url2 = "https://thunderdungeon.com/wp-content/uploads/2025/11/cat-memes-1-20251111.jpg"
-  function somar(a, b){
-    return a + b
+ // let nome = "Gabriel"
 
-  }
+  //let url = "https://static.gazetaesportiva.com/uploads/imagem/2020/08/12/WhatsApp-Image-2020-08-12-at-00.45.17.jpeg"
+ // let url2 = "https://thunderdungeon.com/wp-content/uploads/2025/11/cat-memes-1-20251111.jpg"
+  //function somar(a, b){
+  //  return a + b
 
-  const meusitens = ['teclado', 'mouse', 'monitor', 'luminaria']
+ // }
 
-  const [seunome, setseunome] = useState('') //no statelift, ao inves de escrever o usestate no componente filho (que nesse exemplo, seria o <seunome/>, escrevemos aqui no componente pai)
+  //const meusitens = ['teclado', 'mouse', 'monitor', 'luminaria']
+
+  //const [seunome, setseunome] = useState('') //no statelift, ao inves de escrever o usestate no componente filho (que nesse exemplo, seria o <seunome/>, escrevemos aqui no componente pai)
+
+    //dentro de Router posso definir tbm componentes padroes e views(que serao as rotas)
+  //<li><Link to="/"></Link></li>  esse 'to' é igual ao href no html, ele leva para a URL
+  //<Route path='/'> esse path diz que a URL (que está dentro dos "" no path) exibirá o componente home
+  const navigate = useNavigate()
 
   return ( 
-    <div className="App">
-        <h1>State lift</h1>
+    <Router> 
+      <Navbar />
+        <Switch>
+          <Route path='/'>
+            <Home />
+          </Route>
+          <Route path='/sobre'>
+          <Sobre />
+          </Route>
+          <Route path='/contato'>
+          <Contato />
+          </Route>
+        </Switch>
+      
+
+    </Router>
+  );
+
+ //com o Router, podemos tirar essa div.App
+   
+      
+      {/*
+       <div className="App">
+     <h1>State lift</h1>
       <Seunome setseunome={setseunome}/>
       
       <Saudacoes nome={seunome}/>
-      {/*
+
     <Lista itens={meusitens}/>
        <Lista itens=''/> 
       
@@ -50,14 +82,10 @@ function App() {
       <Lists />
       <Evento/>
       <Form />
+      </div>
+
     */}
-
-
-    </div>
-  );
 }
-
-export default App;
 
 
 //referente aula 08: podemos definir tipos para props, definimos em um objeto chamado PropTypes no componente, e também podemos definir um valor default. Para isso, usamos import PropTypes from "prop-types" (no arquivo Itens.jsx há eu fazendo o uso)
