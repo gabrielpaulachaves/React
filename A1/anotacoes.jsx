@@ -55,4 +55,17 @@ muda a URL da aplicacao, é igual quando eu mudava a URL pelo nodejs, só que ag
 vamos poder acessar outras paginas sem o page reload
 
 para instalar: npm install react-router-dom
+
+
+useEffect
+é como 'o que o componente faz(a açao do componente)'
+usado para gerenciar efeitos colaterias. Que é basicamente uma açao que "vaze" para fora do que é mostrado na tela(ex: buscar API, iniciar um setTimeout, ouvir evento de navegador)
+sintaxe:
+useEffect(()=>{o que ele vai executar}, [quando ele deve fazer]) ou seja, tudo que acontecer dentro do [], ele vai executar a funcao dentro do {}
+
+quando passamos esse array vazio, o useEffect será executado apenas uma vez, quando o componente for renderizado
+
+
+Ou seja, ele executa a partir do momento que o componente é renderizado
+
 */

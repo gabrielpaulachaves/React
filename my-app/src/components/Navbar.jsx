@@ -12,6 +12,7 @@ export default function Navbar(){
         <li><Link to="/sobre">Sobre</Link></li>
         <li><Link to="/contato">Contato</Link></li>
         <li><Link to="/perfil">Seu perfil</Link></li>
+        <li><Link to="/clique">Clique</Link></li>
        </ul> 
         </>
     )

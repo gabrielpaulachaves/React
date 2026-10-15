@@ -15,6 +15,7 @@ import Sobre from './pages/Sobre';
 import Contato from './pages/Contato';
 import Navbar from './components/Navbar';
 import Perfil from './pages/Perfil';
+import Clicar from './pages/Clicar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; //BrowserRouter é o Router
 //QUALQUER HOOK DO REACT ROUTER (COMO O useNavigate, useSearchParams) SÓ FUNCIONAM DENTRO DO <Router />
 
@@ -48,6 +49,7 @@ export default function App() {
         <Route path="/sobre" element={<Sobre />}/>
         <Route path="/contato" element={<Contato />}/> 
         <Route path="/perfil" element={<Perfil />}/> 
+        <Route path="/clique" element={<Clicar />}/> 
         </Routes>
     </Router>
   );
