@@ -14,7 +14,9 @@ import Home from './pages/Home';
 import Sobre from './pages/Sobre';
 import Contato from './pages/Contato';
 import Navbar from './components/Navbar';
-
+import Perfil from './pages/Perfil';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; //BrowserRouter é o Router
+//QUALQUER HOOK DO REACT ROUTER (COMO O useNavigate, useSearchParams) SÓ FUNCIONAM DENTRO DO <Router />
 
 export default function App() {
 
@@ -34,24 +36,19 @@ export default function App() {
     //dentro de Router posso definir tbm componentes padroes e views(que serao as rotas)
   //<li><Link to="/"></Link></li>  esse 'to' é igual ao href no html, ele leva para a URL
   //<Route path='/'> esse path diz que a URL (que está dentro dos "" no path) exibirá o componente home
-  const navigate = useNavigate()
 
-  return ( 
-    <Router> 
+  return (  //o Routes substituiu o switch, o componente navbar fica dentro de Router mas fora de Routes, pois ele deve aparecer em todas as paginas
+          //o componente vai dentro de {} em element. O path é o caminnho da URL para acessar ele
+          //essa é a ordem. Router>Routes>Route
+          //quando colocamos um componente dentro de Router, mas fora de Routes, o reat entende que é estatico
+    <Router>
       <Navbar />
-        <Switch>
-          <Route path='/'>
-            <Home />
-          </Route>
-          <Route path='/sobre'>
-          <Sobre />
-          </Route>
-          <Route path='/contato'>
-          <Contato />
-          </Route>
-        </Switch>
-      
-
+        <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="/sobre" element={<Sobre />}/>
+        <Route path="/contato" element={<Contato />}/> 
+        <Route path="/perfil" element={<Perfil />}/> 
+        </Routes>
     </Router>
   );
 
