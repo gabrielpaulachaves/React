@@ -68,4 +68,6 @@ quando passamos esse array vazio, o useEffect será executado apenas uma vez, qu
 
 Ou seja, ele executa a partir do momento que o componente é renderizado
 
+
+useContext
 */

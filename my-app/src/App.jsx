@@ -16,6 +16,7 @@ import Contato from './pages/Contato';
 import Navbar from './components/Navbar';
 import Perfil from './pages/Perfil';
 import Clicar from './pages/Clicar';
+import AuthProvider from '../contexts/AuthContext'; 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; //BrowserRouter é o Router
 //QUALQUER HOOK DO REACT ROUTER (COMO O useNavigate, useSearchParams) SÓ FUNCIONAM DENTRO DO <Router />
 
@@ -42,6 +43,7 @@ export default function App() {
           //o componente vai dentro de {} em element. O path é o caminnho da URL para acessar ele
           //essa é a ordem. Router>Routes>Route
           //quando colocamos um componente dentro de Router, mas fora de Routes, o reat entende que é estatico
+    <AuthProvider>
     <Router>
       <Navbar />
         <Routes>
@@ -52,6 +54,7 @@ export default function App() {
         <Route path="/clique" element={<Clicar />}/> 
         </Routes>
     </Router>
+  </AuthProvider>
   );
 
  //com o Router, podemos tirar essa div.App
